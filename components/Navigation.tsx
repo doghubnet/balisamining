@@ -39,8 +39,8 @@ export function Navigation() {
                   initial={{ scale: 1 }}
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3, ease: 'easeOut' }}
-                  className={`relative px-2 py-1 text-sm leading-6 tracking-[0.02em] text-[#0F172A] transition-colors duration-300 ${
-                    isActive ? 'font-bold' : 'font-semibold hover:font-bold'
+                  className={`relative px-2 py-1 text-[1.05rem] leading-6 tracking-[0.02em] text-[#0F172A] transition-colors duration-300 ${
+                    isActive ? 'font-semibold' : 'font-semibold'
                   }`}
                 >
                   {item.label}

@@ -57,7 +57,7 @@ export default function HomePage() {
       <Navigation />
       <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-20">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-          <source src="https://streamable.com/vf37x8" type="video/mp4" />
+          <source src="https://i.imgur.com/CpeAhOR.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(15,23,42,0.65)' }} />
         <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-6 py-12 lg:grid-cols-2">
