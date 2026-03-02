@@ -51,7 +51,6 @@ const sectionAnim = {
 
 export default function HomePage() {
   const [open, setOpen] = useState<number | null>(0);
-  const highContrastTextShadow = '0 4px 20px rgba(0,0,0,0.9), 0 2px 10px rgba(0,0,0,0.7)';
 
   return (
     <main>
@@ -60,19 +59,19 @@ export default function HomePage() {
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
           <source src="https://i.imgur.com/CpeAhOR.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(15, 23, 42, 0.88)' }} />
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(15, 23, 42, 0.92)' }} />
         <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-6 py-12 lg:grid-cols-2">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-white" style={{ textShadow: highContrastTextShadow }}>Premium Ethiopian Marble – Timeless Beauty, Global Excellence</p>
-            <h1 className="font-serif text-4xl font-bold leading-tight text-white md:text-6xl" style={{ textShadow: highContrastTextShadow }}>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-white">Premium Ethiopian Marble – Timeless Beauty, Global Excellence</p>
+            <h1 className="font-serif text-4xl font-bold leading-tight text-white md:text-6xl">
               BALISA YESHITILA
               <br />
               MARBLE MINING
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-white" style={{ textShadow: highContrastTextShadow }}>
+            <p className="mt-6 max-w-xl text-lg text-white">
               Sustainable quarrying, precision manufacturing, polishing, and worldwide export of the finest quality Ethiopian marble slabs, tiles, blocks, and custom cut pieces for luxury architecture and interior excellence.
             </p>
-            <a href="#products" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 font-semibold text-white transition duration-300 hover:scale-[1.05] hover:-translate-y-2 hover:brightness-110 hover:shadow-2xl" style={{ textShadow: highContrastTextShadow }}>
+            <a href="#products" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 font-semibold text-white transition duration-300 hover:scale-[1.05] hover:brightness-110">
               Discover Our Marble <ArrowRight size={18} />
             </a>
           </motion.div>
@@ -82,9 +81,9 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             className="marble-card self-end rounded-3xl border border-white/20 p-8 shadow-luxury"
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white" style={{ textShadow: highContrastTextShadow }}>HEY THERE!</p>
-            <h3 className="mt-2 font-serif text-3xl text-white" style={{ textShadow: highContrastTextShadow }}>Founder’s Message</h3>
-            <p className="mt-4 text-sm leading-relaxed text-white" style={{ textShadow: highContrastTextShadow }}>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white">HEY THERE!</p>
+            <h3 className="mt-2 font-serif text-3xl text-white">Founder’s Message</h3>
+            <p className="mt-4 text-sm leading-relaxed text-white">
               We built BALISA YESHITILA MARBLE MINING to elevate Ethiopian stone craftsmanship onto the global stage. Every slab is selected with discipline, processed with advanced technology, and delivered with integrity to projects that define luxury worldwide.
             </p>
           </motion.div>
@@ -272,11 +271,11 @@ export default function HomePage() {
 
       <section id="contact" className="px-6 py-24">
         <div className="mx-auto max-w-5xl rounded-3xl border border-gold/40 bg-gradient-to-r from-slate-900 to-navy p-10 text-center">
-          <h2 className="font-serif text-4xl font-bold text-white" style={{ textShadow: highContrastTextShadow }}>Build Your Next Landmark with Ethiopian Marble Excellence</h2>
-          <p className="mx-auto mt-4 max-w-3xl text-white" style={{ textShadow: highContrastTextShadow }}>
+          <h2 className="font-serif text-4xl font-bold text-white">Build Your Next Landmark with Ethiopian Marble Excellence</h2>
+          <p className="mx-auto mt-4 max-w-3xl text-white">
             Connect with our export and project team to receive technical specifications, finish samples, and premium marble recommendations tailored to your architecture vision.
           </p>
-          <button className="mt-8 rounded-full bg-[#D4AF37] px-8 py-3 font-semibold text-white transition duration-300 hover:scale-[1.05] hover:brightness-110 hover:shadow-2xl" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>Start Your Project Consultation</button>
+          <button className="mt-8 rounded-full bg-[#D4AF37] px-8 py-3 font-semibold text-white transition duration-300 hover:scale-[1.05] hover:brightness-110">Start Your Project Consultation</button>
         </div>
       </section>
 
