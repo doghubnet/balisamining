@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown, Gem, Globe, Hammer, Mountain, Settings, Sparkles, Truck, CheckCircle2 } from 'lucide-react';
 import { useState } from 'react';
 import { Footer } from '@/components/Footer';
-import { Navbar } from '@/components/Navbar';
+import { Navigation } from '@/components/Navigation';
 
 const products = [
   {
@@ -54,14 +54,14 @@ export default function HomePage() {
 
   return (
     <main>
-      <Navbar />
+      <Navigation />
       <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-20">
         <img
-          src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=2000&q=80"
+          src="https://image.made-in-china.com/2f0j00kJfiFpqcnabV/Natural-China-Cheap-Landscape-White-Marble-Slab-for-Flooring-Tile.webp"
           alt="Luxury marble quarry"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/65 to-black/50" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(15, 23, 42, 0.65)" }} />
         <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-6 py-12 lg:grid-cols-2">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-gold">Premium Ethiopian Marble – Timeless Beauty, Global Excellence</p>
@@ -73,7 +73,7 @@ export default function HomePage() {
             <p className="mt-6 max-w-xl text-lg text-slate-100">
               Sustainable quarrying, precision manufacturing, polishing, and worldwide export of the finest quality Ethiopian marble slabs, tiles, blocks, and custom cut pieces for luxury architecture and interior excellence.
             </p>
-            <a href="#products" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 font-semibold text-navy transition hover:scale-105">
+            <a href="#products" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 font-semibold text-navy transition hover:scale-[1.03] hover:-translate-y-2 hover:shadow-2xl duration-300">
               Discover Our Marble <ArrowRight size={18} />
             </a>
           </motion.div>
@@ -97,7 +97,7 @@ export default function HomePage() {
           <h2 className="font-serif text-4xl font-bold">Our Marble Collection</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {products.map((p) => (
-              <motion.article key={p.title} whileHover={{ y: -8 }} className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70">
+              <motion.article key={p.title} whileHover={{ y: -8, scale: 1.03, boxShadow: "0 24px 56px rgba(0,0,0,0.35)" }} transition={{ duration: 0.35, ease: "easeOut" }} className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70">
                 <img src={p.image} alt={p.title} className="h-52 w-full object-cover" />
                 <div className="p-5">
                   <h3 className="font-serif text-xl">{p.title}</h3>
@@ -121,7 +121,7 @@ export default function HomePage() {
               ['Precision Cutting & Polishing', Sparkles],
               ['Global Logistics & Export', Truck]
             ].map(([name, Icon]) => (
-              <motion.div key={name as string} whileHover={{ y: -6 }} className="rounded-2xl border border-white/10 bg-slate-900 p-6">
+              <motion.div key={name as string} whileHover={{ y: -8, scale: 1.03, boxShadow: "0 24px 56px rgba(0,0,0,0.35)" }} transition={{ duration: 0.35, ease: "easeOut" }} className="rounded-2xl border border-white/10 bg-slate-900 p-6">
                 <Icon className="text-gold" />
                 <h3 className="mt-4 font-serif text-2xl">{name as string}</h3>
                 <p className="mt-2 text-sm text-slate-300">Tailored solutions for high-spec architecture and interior projects requiring flawless stone execution.</p>
@@ -153,7 +153,7 @@ export default function HomePage() {
             ['98%', 'On-Time Global Delivery', CheckCircle2],
             ['15+', 'Years of Marble Heritage', Hammer]
           ].map(([n, t, Icon]) => (
-            <motion.div key={t as string} whileHover={{ scale: 1.03 }} className="rounded-2xl border border-white/10 bg-slate-900 p-6 text-center">
+            <motion.div key={t as string} whileHover={{ y: -8, scale: 1.03, boxShadow: "0 24px 56px rgba(0,0,0,0.35)" }} transition={{ duration: 0.35, ease: "easeOut" }} className="rounded-2xl border border-white/10 bg-slate-900 p-6 text-center">
               <Icon className="mx-auto text-gold" />
               <p className="mt-3 font-serif text-4xl text-gold">{n as string}</p>
               <p className="mt-2 text-sm text-slate-300">{t as string}</p>
@@ -167,7 +167,7 @@ export default function HomePage() {
           <h2 className="font-serif text-4xl font-bold">Trusted Partners Worldwide</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {['Luxury Hotel Groups', 'International Architects', 'Major Construction Firms', 'European Importers', 'Middle East Developers', 'US Design Studios', 'Global Distributors', 'Elite Contractors'].map((p) => (
-              <motion.div key={p} whileHover={{ y: -4 }} className="group rounded-xl border border-white/10 bg-slate-900/70 p-5 grayscale transition hover:grayscale-0">
+              <motion.div key={p} whileHover={{ y: -8, scale: 1.03, boxShadow: "0 24px 56px rgba(0,0,0,0.35)" }} transition={{ duration: 0.35, ease: "easeOut" }} className="group rounded-xl border border-white/10 bg-slate-900/70 p-5 grayscale transition hover:grayscale-0">
                 <div className="flex h-14 items-center justify-center rounded-lg border border-dashed border-slate-600 text-center text-sm font-semibold text-slate-300 group-hover:text-gold">
                   {p}
                 </div>
@@ -187,7 +187,7 @@ export default function HomePage() {
               'Strategic logistics route opens for Gulf projects',
               'Architect partnership program for landmark interiors'
             ].map((n) => (
-              <motion.article key={n} whileHover={{ y: -6 }} className="rounded-2xl border border-white/10 bg-slate-900 p-5">
+              <motion.article key={n} whileHover={{ y: -8, scale: 1.03, boxShadow: "0 24px 56px rgba(0,0,0,0.35)" }} transition={{ duration: 0.35, ease: "easeOut" }} className="rounded-2xl border border-white/10 bg-slate-900 p-5">
                 <p className="text-xs uppercase tracking-[0.2em] text-gold">Industry Update</p>
                 <h3 className="mt-3 font-serif text-xl">{n}</h3>
               </motion.article>
@@ -222,8 +222,8 @@ export default function HomePage() {
             ].map((project) => (
               <motion.div
                 key={project.title}
-                whileHover={{ scale: 1.03, y: -6 }}
-                transition={{ duration: 0.3, ease: 'easeOut' }}
+                whileHover={{ y: -8, scale: 1.03, boxShadow: '0 24px 56px rgba(0,0,0,0.35)' }}
+                transition={{ duration: 0.35, ease: 'easeOut' }}
                 className="min-w-[300px] snap-start overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 shadow-xl md:min-w-[420px]"
               >
                 <img src={project.image} alt={project.title} className="h-56 w-full object-cover" />
@@ -265,7 +265,7 @@ export default function HomePage() {
           <p className="mx-auto mt-4 max-w-3xl text-slate-200">
             Connect with our export and project team to receive technical specifications, finish samples, and premium marble recommendations tailored to your architecture vision.
           </p>
-          <button className="mt-8 rounded-full bg-gold px-8 py-3 font-semibold text-navy transition hover:scale-105">Start Your Project Consultation</button>
+          <button className="mt-8 rounded-full bg-gold px-8 py-3 font-semibold text-navy transition hover:scale-[1.03] hover:-translate-y-2 hover:shadow-2xl duration-300">Start Your Project Consultation</button>
         </div>
       </section>
 
