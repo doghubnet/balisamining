@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --deep-navy: #0f172a;
+  --elegant-gold: #d4af37;
+  --stone-beige: #f5ede1;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-950 text-white antialiased;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #f7e7b3 45%, #b8860b 100%);
+}
+
+.marble-card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.7));
+  backdrop-filter: blur(12px);
+}
