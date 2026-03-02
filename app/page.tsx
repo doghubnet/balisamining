@@ -9,19 +9,19 @@ import { Navigation } from '@/components/Navigation';
 const products = [
   {
     title: 'Classic White Marble Slabs',
-    image: 'https://images.unsplash.com/photo-1618221381711-42ca8ab6e908?auto=format&fit=crop&w=1200&q=80'
+    image: 'https://cdn.shopify.com/s/files/1/0272/6956/2456/files/b_Calacatta_Gold_Dual_Finish_SLCGA1DF3_2000x.jpg?v=1634579863'
   },
   {
     title: 'Golden Vein Marble Tiles',
-    image: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1200&q=80'
+    image: 'https://image.made-in-china.com/2f0j00WlFkbMwBrtca/60X60-80X80-Glossy-Calacata-Gold-Vein-Marble-Look-Porcelain-Floor-Tiles.webp'
   },
   {
     title: 'Grey Emperador & Special Finishes',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAVWK5RptD1wEMYryfydvKnTj05EopaEDfbA&s'
   },
   {
     title: 'Custom Cut & Fabrication',
-    image: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1200&q=80'
+    image: 'https://www.allstonesolutions.co.za/wp-content/uploads/2024/03/marble_fabrication_benefits_explained.jpg'
   }
 ];
 
@@ -56,12 +56,10 @@ export default function HomePage() {
     <main>
       <Navigation />
       <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-20">
-        <img
-          src="https://image.made-in-china.com/2f0j00kJfiFpqcnabV/Natural-China-Cheap-Landscape-White-Marble-Slab-for-Flooring-Tile.webp"
-          alt="Luxury marble quarry"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(15, 23, 42, 0.65)" }} />
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="https://streamable.com/vf37x8" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(15,23,42,0.65)' }} />
         <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-6 py-12 lg:grid-cols-2">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-gold">Premium Ethiopian Marble – Timeless Beauty, Global Excellence</p>
@@ -92,22 +90,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      <motion.section id="products" variants={sectionAnim} initial="hidden" whileInView="show" viewport={{ once: true }} className="bg-navy px-6 py-20">
+      <motion.section id="products" variants={sectionAnim} initial="hidden" whileInView="show" viewport={{ once: true }} className="bg-[#F8F4ED] px-6 py-20 text-slate-900">
         <div className="mx-auto max-w-7xl">
           <h2 className="font-serif text-4xl font-bold">Our Marble Collection</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}
+            className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4"
+          >
             {products.map((p) => (
-              <motion.article key={p.title} whileHover={{ y: -8, scale: 1.03, boxShadow: "0 24px 56px rgba(0,0,0,0.35)" }} transition={{ duration: 0.35, ease: "easeOut" }} className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70">
+              <motion.article
+                key={p.title}
+                variants={{ hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } }}
+                whileHover={{ y: -8, scale: 1.03, boxShadow: "0 24px 56px rgba(0,0,0,0.22)" }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                className="overflow-hidden rounded-2xl border border-slate-200 bg-white"
+              >
                 <img src={p.image} alt={p.title} className="h-52 w-full object-cover" />
                 <div className="p-5">
-                  <h3 className="font-serif text-xl">{p.title}</h3>
-                  <button className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold">
+                  <h3 className="font-serif text-xl text-slate-900">{p.title}</h3>
+                  <button className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#D4AF37]">
                     Explore Collection <ArrowRight size={16} />
                   </button>
                 </div>
               </motion.article>
             ))}
-          </div>
+          </motion.div>
         </div>
       </motion.section>
 

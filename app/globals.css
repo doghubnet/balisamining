@@ -5,7 +5,7 @@
 :root {
   --deep-navy: #0f172a;
   --elegant-gold: #d4af37;
-  --stone-beige: #f5ede1;
+  --stone-beige: #f8f4ed;
 }
 
 * {
@@ -17,7 +17,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   letter-spacing: 0.01em;
-  @apply bg-slate-950 text-white antialiased;
+  @apply bg-white text-slate-900 antialiased;
 }
 
 h1,
@@ -41,6 +41,33 @@ input {
 }
 
 .marble-card {
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.7));
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.68));
   backdrop-filter: blur(12px);
+}
+
+.bg-navy,
+.bg-slate-950 {
+  background-color: #ffffff !important;
+}
+
+.bg-slate-900,
+.bg-slate-900\/70,
+.bg-slate-900\/80 {
+  background-color: #f8f4ed !important;
+}
+
+.text-white,
+.text-slate-100,
+.text-slate-200,
+.text-slate-300 {
+  color: #0f172a !important;
+}
+
+.border-white\/10,
+.border-white\/20 {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+section {
+  scroll-margin-top: 96px;
 }
